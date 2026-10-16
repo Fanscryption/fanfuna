@@ -269,5 +269,5 @@ img[src='/images/wip.png'] {
 }
 
 .event-border::before {
-  box-shadow: inset 0 0 30px black, 0 0 4px #000a;
+  box-shadow: inset 0 0 30px black, 0 1px 0 1px #000;
 }
