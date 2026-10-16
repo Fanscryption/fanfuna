@@ -20,7 +20,7 @@
   {{ with site.GetPage "/events" }}
   {{ range .RegularPages }}
   <li class='gbc border scanline-background future' data-date='{{ .Date.Format "2006-01-02" }}'>
-    <a data-cover class='gbc border' href="{{ .RelPermalink }}" aria-hidden=true>
+    <a data-cover class=event-border href="{{ .RelPermalink }}" aria-hidden=true>
       {{ partial "cover.html" . }}
     </a>
 
