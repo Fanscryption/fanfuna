@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=color-scheme content='dark light' />
+  <title>Events</title>
+
+  {{ with resources.Get "css/common.css" }}
+  {{ $css := . | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
+
+  {{ with resources.Get "js/common.js" }}
+  {{ $js := . | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
+
+  {{ block "styles" . }}{{ end }}
+</head>
+
+<body>
+  <header>
+    <section>
+      <div class=content>
+        {{ partial "nav.html" }}
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <div class=content>
+        {{ block "main" . }}{{ end }}
+      </div>
+    </section>
+  </main>
+
+  {{ partial "footer.html" }}
+</body>
+
+</html>

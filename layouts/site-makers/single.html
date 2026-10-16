@@ -1,0 +1,68 @@
+{{ define "styles" }}
+<style>
+  .content {
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+    text-align: center;
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+
+{{ .Content }}
+
+<figure>
+  <figcaption>Professor Eggnog</figcaption>
+  <img src='{{ (resources.Get "img/hero.png").RelPermalink }}' alt="">
+  <img src='/museum/bg2.png' alt="">
+  <img src='/museum/bg4.png' alt="">
+  <img src='{{ (resources.Get "img/nav/homepagemockup.png").RelPermalink }}' alt="">
+  <img src='{{ (resources.Get "img/nav/aboutusmockup.png").RelPermalink }}' alt="">
+  <img src='{{ (resources.Get "img/nav/featuredmockup.png").RelPermalink }}' alt="">
+</figure>
+
+<figure>
+  <figcaption>goofmark_</figcaption>
+  <img src='{{ (resources.Get "img/nav/home.png").RelPermalink }}' alt="">
+  <img src='/museum/home-alt2.png' alt="">
+  <img src='/museum/home-alt3.png' alt="">
+  <img src='{{ (resources.Get "img/nav/about.png").RelPermalink }}' alt="">
+  <img src='{{ (resources.Get "img/nav/past-events.png").RelPermalink }}' alt="">
+</figure>
+
+<figure>
+  <figcaption>mars</figcaption>
+  <img src='{{ (resources.Get "img/archivist-banner.png").RelPermalink }}' alt="">
+  <img src='{{ (resources.Get "img/p03-items.png").RelPermalink }}' alt="">
+  <img src='/museum/thetrio-full.png' alt="">
+  <img src='/museum/theothertrio-full.png' alt="">
+  <img src='/museum/trio-mockup.png' alt="">
+  <img src='/museum/othertrio.mockup.png' alt="">
+  <img src='{{ (resources.Get "img/rebecha_smirk.png").RelPermalink }}' alt="">
+  <img src='/images/bottomlayout.png' alt="">
+</figure>
+
+<figure>
+  <figcaption>Carpengizmat</figcaption>
+  <img src='/images/wip.png' alt="">
+  <img src='/images/fanfuna_pattern.png' alt="">
+</figure>
+
+<figure>
+  <figcaption>AnnaStudiio</figcaption>
+  <img src='/museum/archivist_sketch.png' alt="">
+  <img src='/museum/logo2.png' alt="">
+  <img src='{{ (resources.Get "img/logo.png").RelPermalink }}' alt="">
+</figure>
+
+<figure>
+  <figcaption>vladde</figcaption>
+  <img src='/museum/logo.png' alt="">
+  <img src='/museum/wip.old.png' alt="">
+  <!-- <img src='/images/number_pattern.png' alt=""> lol it's barely visible on a dark bg -->
+  <img src='/museum/cloud.png' alt="">
+</figure>
+
+{{ end }}

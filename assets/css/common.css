@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Marksman";
+  src: url("/fonts/Marksman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heavyweight";
+  src: url("/fonts/HEAVYWEIGHT.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  box-sizing: border-box;
+  font-size: 1.12em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ----- */
+
+
+
+:root {
+  --text-primary-rgb: 245, 240, 240;
+  --text-secondary-rgb: 165, 140, 140;
+  --background-rgb: 14, 14, 14;
+  --border-subtle-rgb: 30, 30, 30;
+
+  --text-primary: rgb(var(--text-primary-rgb));
+  --text-secondary: rgb(var(--text-secondary-rgb));
+  --background: rgb(var(--background-rgb));
+  --border-subtle: rgb(var(--border-subtle-rgb));
+
+  --gbc-primary-color: #C9D78E;
+  --gbc-secondary-color: #6C765A;
+
+  --scanline-height: 2px;
+  --scanline-opacity: 0.1;
+
+  --page-width: min(700px, 95svw);
+
+  color: var(--text-primary);
+  background-color: var(--background);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+a {
+  color: #fcbdca;
+}
+
+.cover {
+  width: 250px;
+  aspect-ratio: 16 / 9;
+  background-color: gray;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  align-self: flex-start;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section:has(>.content) {
+  display: flex;
+  justify-content: center;
+}
+
+main>section>div.content {}
+
+div.content {
+  width: var(--page-width);
+}
+
+#page-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-block: 1em 0.25em;
+
+  & a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    color: var(--gbc-primary-color);
+    font-family: "Marksman", monospace;
+    font-size: 32px;
+    text-shadow: 0 2px 0 black, 0 2px 4px #00010066, 0 4px 10px #00010066;
+    text-decoration: none;
+  }
+
+  & img {
+    image-rendering: pixelated;
+    width: 150px;
+  }
+}
+
+body>footer>section>div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: #666;
+  font-size: 0.7em;
+  padding-block: 2em;
+}
+
+body>footer a {
+  color: #666;
+}
+
+body>footer [data-section=socials] {
+  margin-block: 2em;
+  ;
+}
+
+body>footer [data-section=socials]>nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+body>footer [data-section=socials]>nav>a {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 4px;
+  width: 60px;
+  text-decoration: none;
+
+  &>img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.gbc.border {
+  border: 6px solid transparent;
+  border-image-source: url(/images/gbc-button@2x.png);
+  border-image-slice: 6 fill;
+  border-image-width: 6px;
+  border-image-repeat: round;
+}
+
+hr.gbc {
+  margin: 0;
+  border: none;
+  height: 8px;
+  background-image: url(/images/gbc-border@2x.png);
+  position: relative;
+}
+
+img.gbc {
+  image-rendering: pixelated;
+}
+
+
+.gbc.button>.scroll-dash-outline {
+  position: relative;
+  line-height: 0;
+}
+
+.gbc.button>.scroll-dash-outline:hover::after {
+  content: '';
+  position: absolute;
+  inset: calc(-1 * var(--scanline-height));
+  background-image:
+    linear-gradient(90deg, black 50%, transparent 50%),
+    linear-gradient(90deg, black 50%, transparent 50%),
+    linear-gradient(0deg, black 50%, transparent 50%),
+    linear-gradient(0deg, black 50%, transparent 50%);
+  background-size: 16px var(--scanline-height), 16px var(--scanline-height), var(--scanline-height) 16px, var(--scanline-height) 16px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  animation: march 1s steps(4) infinite;
+}
+
+@keyframes march {
+  to {
+    background-position: 16px 0, -16px 100%, 0 -16px, 100% 16px;
+  }
+}
+
+/* we want to mark events in the future. we append a "upcoming" to the title, and cover the image with a darker overlay */
+[data-future] {
+  & [data-title]::before {
+
+    content: 'Upcoming';
+    color: black;
+    font-size: 0.9em;
+    background-color: var(--gbc-primary-color);
+    border-radius: 4px;
+    padding: 1px 4px;
+    margin-inline-end: 8px;
+    text-shadow: none;
+    box-shadow: 0 2px 0 black, 0 4px 10px #00010033;
+  }
+
+  & [data-cover] {
+    position: relative
+  }
+
+  & [data-cover]::after {
+    content: 'Upcoming';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: Marksman, monospace;
+    font-size: 3em;
+    color: white;
+    inset: 0;
+    background-color: #000a;
+    pointer-events: none;
+  }
+}
+
+img[src='/images/wip.png'] {
+  border-block-end: 1px solid rgb(var(--border-subtle-rgb));
+  padding-block-end: 1em;
+}

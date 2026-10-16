@@ -1,0 +1,26 @@
+<nav id=page-navigation>
+    <a class='gbc button' href='/'>
+        <div class=scroll-dash-outline>
+            {{ with resources.Get "img/nav/home.png" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt=''>
+            {{ end }}
+        </div>
+        Homepage
+    </a>
+    <a class='gbc button' href=/#about>
+        <div class=scroll-dash-outline>
+            {{ with resources.Get "img/nav/about.png" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt=''>
+            {{ end }}
+        </div>
+        About Us
+    </a>
+    <a class='gbc button' href='/events'>
+        <div class=scroll-dash-outline>
+            {{ with resources.Get "img/nav/past-events.png" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt=''>
+            {{ end }}
+        </div>
+        Past Events
+    </a>
+</nav>

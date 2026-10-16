@@ -1,0 +1,7 @@
+baseURL = 'https://fanfuna.vladde.net/'
+locale = 'en-us'
+title = 'FanFuna Collective'
+buildFuture = true
+
+[markup.goldmark.renderer]
+unsafe = true

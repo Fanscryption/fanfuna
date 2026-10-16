@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir=ltr>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content='width=device-width, initial-scale=1.0'>
+  <meta name=color-scheme content='dark' />
+  <title>FanFuna</title>
+
+  <meta property="og:site_name" content="FanFuna">
+  <meta property="og:title" content="The FanFuna Collective">
+  <meta property="og:description" content="Home of the Official Committee for Daniel Mullins Games">
+  <meta property="og:image" content='{{ "banner.jpg" | absURL }}'>
+  <meta property="og:url" content='{{ site.Home.Permalink }}'>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4400aa">
+
+  {{ with resources.Get "css/common.css" }}
+  {{ $css := . | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
+
+  {{ with resources.Get "js/common.js" }}
+  {{ $js := . | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
+
+  {{ with resources.Get "img/hero.png" }}
+  <style>
+    html {
+      --hero-url: url("{{ .RelPermalink }}")
+    }
+  </style>
+  {{ end }}
+
+  <style data-section=header>
+    :root {
+      background-color: #1a1a1a;
+    }
+
+    body>header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: calc(100svh - 150px);
+      position: relative;
+
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+
+      &>nav {
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      & hgroup>h1 {
+        font-size: 3em;
+        margin-block-end: 0;
+        margin-block-start: 2em;
+
+        &>img {
+          height: auto;
+          max-height: min(300px, 30svh);
+          filter: drop-shadow(0 0 20px rgb(16, 7, 56));
+        }
+      }
+
+      & hgroup>p {
+        font-size: 1.6em;
+        max-width: 450px;
+        margin-inline: auto;
+        margin-block: 0;
+      }
+    }
+
+    footer>section,
+    main>section {
+      padding-block: 2em;
+      clear: both;
+    }
+
+    body>header {
+      background: linear-gradient(#0000, #000a), var(--hero-url);
+      background-size: cover;
+      background-position: 30% 0%;
+      background-attachment: fixed;
+      image-rendering: pixelated;
+    }
+  </style>
+
+  <style data-section=gbc-nav>
+    section#gbc-nav>nav {
+      padding-block: 1em 0.5em;
+
+      & a {
+        font-size: 28px;
+        font-family: Marksman, monospace;
+        color: #0b0e08;
+        text-shadow: none;
+      }
+    }
+
+    section#gbc-nav {
+
+      position: relative;
+      padding: 0;
+      background: #6c765a;
+    }
+
+    section#gbc-nav::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to bottom, transparent 0 var(--scanline-height), rgba(0, 0, 0, var(--scanline-opacity)) var(--scanline-height) calc(2 * var(--scanline-height)));
+      background-size: 1px calc(2 * var(--scanline-height));
+      background-repeat: repeat;
+      pointer-events: none;
+    }
+
+    #gbc-nav {
+      position: relative;
+      overflow-x: clip;
+    }
+
+    .characters {
+      position: absolute;
+      /* yikes it should be 200px, but custom overlay does not match*/
+      height: 201px;
+      bottom: 8px;
+      right: calc(50% + 280px);
+      z-index: 1;
+      filter: drop-shadow(0 0 8px rgba(20, 31, 21, 0.8));
+    }
+
+    .characters.right {
+      right: unset;
+      left: calc(50% + 280px);
+    }
+  </style>
+
+  <style data-section=past-events>
+    #past {
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3.5%;
+      list-style: none;
+      padding: 0;
+    }
+
+    @media screen and (max-width: 780px) {
+      #past {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+
+    #past h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.2em;
+    }
+
+    section#past-events {
+      padding-inline: max(2.5%, (100% - 1200px) / 2);
+      background: linear-gradient(#27284b 60%, rgb(30, 74, 141));
+    }
+
+    .past-event {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .past-event .cover {
+      width: 100%;
+      aspect-ratio: 1.75;
+      object-fit: cover;
+    }
+
+    .past-event header {
+      margin-block-end: 1em;
+    }
+
+    .all-events {
+      text-align: end
+    }
+  </style>
+
+  <style data-section=about>
+    #about {
+      padding-block: 300px;
+      position: relative;
+      background-image: url(/images/bottomlayout_2000.png);
+      background-position: top center;
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+      color: black;
+      margin-block-start: -300px;
+    }
+
+    #about>.content {
+      position: relative;
+      max-width: 600px;
+      z-index: 10;
+      padding-inline: 12px;
+      /* text-shadow: #978458 0 0 10px; */
+    }
+
+    #about>.content::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-color: #978458;
+      /* box-shadow: 0 0 10px 10px #978458; */
+      filter: blur(15px);
+      z-index: -1;
+      opacity: 0.9;
+    }
+
+    img#about-image {
+      width: 800px;
+      margin-inline-end: -350px;
+      margin-block-start: -180px;
+      float: inline-end;
+      filter: drop-shadow(8px -5px 0.5px black);
+      shape-outside: url('{{ (resources.Get "img/rebecha_smirk.png").RelPermalink }}');
+      shape-image-threshold: 0.5;
+      shape-margin: 1rem;
+    }
+
+    @media screen and (max-width: 520px) {
+      img#about-image {
+        float: none;
+        margin: 0;
+        margin-block-end: -1em;
+        filter: drop-shadow(0 8px 4px rgb(44, 37, 31));
+      }
+
+      #about-image+h2 {
+        margin-block-start: 0;
+      }
+    }
+
+    #about a {
+      color: #41c;
+    }
+
+    section:has(~ .pull-border) {
+      padding-block-end: 300px;
+    }
+
+    [data-future] [data-cover]::after {
+      font-size: 4em;
+      /* odd, border-radius is 12px, but i can see some bleed unless i set 11px here */
+      border-radius: 11px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <hgroup>
+      <h1>
+        {{ with resources.Get "img/logo.png" }}
+        {{ $img := .Resize "600x" }}
+        <img alt=FanFuna src='{{ $img.RelPermalink }}' width="{{ $img.Width }}" height="{{ $img.Height }}">
+        {{ end }}
+      </h1>
+      <p>Home of the official committee for Daniel Mullins Games</p>
+    </hgroup>
+  </header>
+
+  <main>
+    <section id=gbc-nav>
+      <hr class=gbc>
+      <nav id=page-navigation>
+        <a class='gbc button' href=/#about>
+          <div class=scroll-dash-outline>
+            {{ with resources.Get "img/nav/about.png" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt=''>
+            {{ end }}
+          </div>
+          About Us
+        </a>
+        <a class='gbc button' href='/events'>
+          <div class=scroll-dash-outline>
+            {{ with resources.Get "img/nav/past-events.png" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt=''>
+            {{ end }}
+          </div>
+          Past Events
+        </a>
+      </nav>
+
+      {{ with resources.Get "img/nav/trio.start.png" }}
+      <img class=characters src='{{ .RelPermalink }}' alt="">
+      {{ end }}
+
+      {{ with resources.Get "img/nav/trio.end.png" }}
+      <img class='characters right' src='{{ .RelPermalink }}' alt="">
+      {{ end }}
+
+      <hr class=gbc style='z-index: 10' data-comment="i need the z-index bcs the trios' shadows appear over them">
+    </section>
+
+    <section id=past-events>
+      <h2>Latest events</h2>
+      <ol id=past>
+        {{ with site.GetPage "/events" }}
+        {{ range first 3 .RegularPages }}
+        <li data-date='{{ .Date.Format "2006-01-02" }}'>
+          <article class='past-event'>
+            <header>
+              <h3 data-title>{{ .Title }}</h3>
+              <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2 January 2006" }}</time>
+            </header>
+
+            <a data-cover href="{{ .RelPermalink }}" aria-hidden=true>
+              {{ partial "cover.html" . }}
+            </a>
+
+            <p class=description>{{ .Params.short | safeHTML }}</p>
+
+            <a href="{{ .RelPermalink }}">Read more</a>
+          </article>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ol>
+      <script>
+        const list = document.getElementById('past')
+        for (const li of list.children) {
+          modifyElementIfInFuture(li)
+        }
+      </script>
+
+      <br>
+      <p class=all-events>
+        <a href=/events>See all past events</a>
+      </p>
+    </section>
+
+    <section id=about class=pull-border>
+      <div class=content>
+        {{ with resources.Get "img/rebecha_smirk.png" }}
+        {{ $img := .Resize "600x" }}
+        <img id=about-image alt='' src='{{ $img.RelPermalink }}' width="{{ $img.Width }}" height="{{ $img.Height }}">
+        {{ end }}
+        <h2>About us</h2>
+        <p>
+          The community lives on as a collective of creatives dead serious on bringing the Daniel Mullins Games
+          (DMG) Community the best experiences and events possible!
+        </p>
+        <p>
+          We've <a href=https://tiltify.com/+fanscryption-foundation/profile>raised over $10,000 for charity</a>, and held events for thousands of viewers over the years. With over
+          a dozen talented creatives across many skills, we produly present to you:
+        </p>
+        <p>
+          <strong>FanFuna</strong>, the community driven DMG committee!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  {{ partial "footer.html" }}
+</body>
+
+</html>

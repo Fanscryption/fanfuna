@@ -1,0 +1,6 @@
+{{ with .Resources.Get .Params.cover }}
+{{ $img := .Fill "400x240" }}
+<img class=cover alt='' src='{{ $img.RelPermalink }}' width='{{ $img.Width }}' height='{{ $img.Height }}'>
+{{ else }}
+<div class='cover missing' aria-hidden=true>(missing cover image)</div>
+{{ end }}

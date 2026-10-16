@@ -1,0 +1,67 @@
+{{ define "styles" }}
+{{ with resources.Get "css/past-events.css" }}
+{{ $css := . | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+
+{{ with resources.Get "img/archivist-banner.png" }}
+{{ $bg := .Resize "1000x webp q90" }}
+<style>
+  html {
+    --hero-url: url("{{ $bg.RelPermalink }}")
+  }
+</style>
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<h1 id=past-events>Past events</h1>
+<ol id=past>
+  {{ with site.GetPage "/events" }}
+  {{ range .RegularPages }}
+  <li class='gbc border scanline-background future' data-date='{{ .Date.Format "2006-01-02" }}'>
+    <a data-cover class='gbc border' href="{{ .RelPermalink }}" aria-hidden=true>
+      {{ partial "cover.html" . }}
+    </a>
+
+    <div>
+      <h2 data-title style='margin-block-start: 0;'>{{ .Title }}</h2>
+      <p class=description>{{ .Params.short }}</p>
+      <a href="{{ .RelPermalink }}">Read more</a>
+    </div>
+  </li>
+  {{ end }}
+  {{ end }}
+</ol>
+
+<script>
+  const list = document.getElementById('past')
+  for (const li of list.children) {
+    modifyElementIfInFuture(li)
+  }
+
+  const pastEvents = document.querySelector('h1#past-events')
+  const futureItems = list.querySelectorAll('li[data-future]')
+
+  if (futureItems.length > 0) {
+    const futureEvents = document.createElement('ol')
+    futureEvents.id = 'future-events'
+
+    futureEvents.append(...futureItems)
+    pastEvents.before(futureEvents)
+
+    const upcomingTitle = document.createElement('h2')
+    upcomingTitle.textContent = 'Upcoming events'
+    upcomingTitle.className = 'main-title'
+    futureEvents.before(upcomingTitle)
+  }
+</script>
+
+{{ with resources.Get "img/p03-items.png" }}
+{{ $img := .Resize "800x" }}
+<br>
+<img src='{{ $img.RelPermalink }}' width='{{ $img.Width }}' height='{{ $img.Height }}'>
+{{ end }}
+
+
+{{ end }}

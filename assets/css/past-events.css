@@ -1,0 +1,116 @@
+:root {
+  --secondary-color: #122435;
+  --background: #020202;
+  background-color: var(--background);
+}
+
+.main-title,
+h1 {
+  margin-block-start: 2em;
+  color: var(--gbc-primary-color);
+
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+html {
+  background-image: url(/images/number_pattern.png);
+  background-position: 40% bottom;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-block-end: 1em;
+  margin-block-end: 1em;
+  font-size: 0.9em;
+  text-shadow: 0 2px 0 black, 0 4px 10px #00010033;
+
+  padding: 1em;
+  color: var(--gbc-primary-color);
+  background-color: var(--secondary-color);
+
+  &>:first-child {
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    flex-flow: column;
+
+  }
+
+  li>a {
+    margin: -6px;
+
+    &>.cover {
+      width: 100%;
+    }
+  }
+
+}
+
+.cover {
+  border-radius: 0;
+}
+
+header>section:first-child {
+  background-color: var(--secondary-color);
+  border-color: var(--gbc-primary-color);
+  border-style: solid;
+  border-width: 0;
+  border-block-width: 8px;
+  padding-block: 0.5em;
+}
+
+/* little hack to get archivist ontop >:) */
+header>section:first-child {
+  --calculated-width: min(100vw, 1000px);
+
+  /* archivist.png is 1524 × 620, using that as aspect ratio */
+  --calculated-height: calc(var(--calculated-width) / 1524 * 620);
+  /* archivist_banner.png is 3840 × 2160 */
+  --calculated-height: calc(var(--calculated-width) / 3840 * 2160);
+  margin-top: var(--calculated-height);
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(50% - var(--calculated-width) / 2);
+    right: calc(50% - var(--calculated-width) / 2);
+    height: var(--calculated-height);
+    background-position: center bottom;
+    background-size: var(--calculated-width);
+    background-repeat: no-repeat;
+    background-image: var(--hero-url);
+    box-shadow: 0 0 50px 0 var(--background);
+    background-color: var(--background);
+  }
+}
+
+.scanline-background,
+header>section:first-child {
+  background-image:
+    repeating-linear-gradient(to bottom,
+      #a5a5a5 0,
+      #bfbfbf 2px,
+      #a5a5a5 4px);
+  background-blend-mode: overlay, normal;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
