@@ -96,8 +96,6 @@ section:has(>.content) {
   justify-content: center;
 }
 
-main>section>div.content {}
-
 div.content {
   width: var(--page-width);
 }
