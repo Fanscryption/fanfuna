@@ -1,4 +1,4 @@
-baseURL = 'https://fanfuna.vladde.net/'
+baseURL = 'https://fanfuna.org/'
 locale = 'en-us'
 title = 'FanFuna Collective'
 buildFuture = true
