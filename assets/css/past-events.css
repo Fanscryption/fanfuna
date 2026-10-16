@@ -2,6 +2,8 @@
   --secondary-color: #122435;
   --background: #020202;
   background-color: var(--background);
+
+  --page-width: min(800px, 95svw);
 }
 
 .main-title,
