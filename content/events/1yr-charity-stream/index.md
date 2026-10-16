@@ -9,6 +9,8 @@ authors = [
 ]
 +++
 
+{{< youtube FvJCUxMtDIM >}}
+
 ![work in progress](/images/wip.png)
 
 this was the *real* first fan organized big event! raised $2000

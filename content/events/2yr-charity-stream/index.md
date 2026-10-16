@@ -9,6 +9,8 @@ authors = [
 ]
 +++
 
+{{< youtube Wcmy9yFW3hk >}}
+
 ![work in progress](/images/wip.png)
 
 raised $3000!!!! this was the second big fan organized big event!
