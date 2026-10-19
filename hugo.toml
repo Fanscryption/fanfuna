@@ -2,6 +2,7 @@ baseURL = 'https://fanfuna.org/'
 locale = 'en-us'
 title = 'FanFuna Collective'
 buildFuture = true
+disableKinds = ["taxonomy", "term"]
 
 [markup.goldmark.renderer]
 unsafe = true
