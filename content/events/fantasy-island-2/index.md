@@ -4,7 +4,7 @@ title = "Fantasy Island 2"
 draft = false
 short = '''bawoaw! an event to spread love and caring for each other. remember! sharing is caring.'''
 cover = "fantasyislandcover.png"
-
+logo = "Event-Logo.png"
 authors = [
   { name = "Chaosyr", link = "https://stoatgames.icu/news/author/chaosyr/" },
   { name = "LeshyIRL", link = "https://fanscryption.com/" },
