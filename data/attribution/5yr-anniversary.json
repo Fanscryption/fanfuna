@@ -1,91 +1,5 @@
 [
   {
-    "section": "Event Committee",
-    "subsections": [
-      {
-        "subsection": "Committee Leaders",
-        "contributors": [
-          "Secundus",
-          "LeshyIRL"
-        ]
-      },
-      {
-        "subsection": "Committee Chairman",
-        "contributors": [
-          "MrInvizible",
-          "AnnaStudiio"
-        ]
-      },
-      {
-        "subsection": "Committee Chiefs",
-        "contributors": [
-          "Tiff4744 (Graphics)",
-          "Chaosyr (Historian)",
-          "AnimeJesus (Secretarial)",
-          "Carpengizmat (Secretarial)",
-          "Hedgel2774 (Secretarial)",
-          "vladde (Technical)",
-          "aaandrew (Video-Production)"
-        ]
-      },
-      {
-        "subsection": "Graphics Committee",
-        "contributors": [
-          "AnnaStudiio",
-          "Tiff4744",
-          "Carpengizmat",
-          "bugmangregor",
-          "Croffee",
-          "goofmark_",
-          "Kitxipixi",
-          "professoreggnog",
-          "scrybeofcunt",
-          "TremendousAsmodeus"
-        ]
-      },
-      {
-        "subsection": "Historian Committee",
-        "contributors": [
-          "Chaosyr",
-          "Kitxipixi",
-          "scrybeofcunt",
-          "Sefaku"
-        ]
-      },
-      {
-        "subsection": "Secretarial Committee",
-        "contributors": [
-          "AnimeJesus",
-          "Carpengizmat",
-          "Hedgel2774",
-          "bugmangregor",
-          "Croffee",
-          "scrybeofcunt"
-        ]
-      },
-      {
-        "subsection": "Technical Committee",
-        "contributors": [
-          "vladde",
-          "Chaosyr",
-          "aaandrew",
-          "bugmangregor"
-        ]
-      },
-      {
-        "subsection": "Video-Production Committee",
-        "contributors": [
-          "aaandrew",
-          "Carpengizmat",
-          "Hedgel2774",
-          "Croffee",
-          "Kitxipixi",
-          "heyitserin"
-        ]
-      }
-    ]
-  },
-  {
     "section": "The Scrybe of Technology",
     "subsections": [
       {
@@ -319,6 +233,92 @@
         "subsection": "Background Music",
         "contributors": [
           "Jonah Senzel"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Event Committee",
+    "subsections": [
+      {
+        "subsection": "Committee Leaders",
+        "contributors": [
+          "Secundus",
+          "LeshyIRL"
+        ]
+      },
+      {
+        "subsection": "Committee Chairman",
+        "contributors": [
+          "MrInvizible",
+          "AnnaStudiio"
+        ]
+      },
+      {
+        "subsection": "Committee Chiefs",
+        "contributors": [
+          "Tiff4744 (Graphics)",
+          "Chaosyr (Historian)",
+          "AnimeJesus (Secretarial)",
+          "Carpengizmat (Secretarial)",
+          "Hedgel2774 (Secretarial)",
+          "vladde (Technical)",
+          "aaandrew (Video-Production)"
+        ]
+      },
+      {
+        "subsection": "Graphics Committee",
+        "contributors": [
+          "AnnaStudiio",
+          "Tiff4744",
+          "Carpengizmat",
+          "bugmangregor",
+          "Croffee",
+          "goofmark_",
+          "Kitxipixi",
+          "professoreggnog",
+          "scrybeofcunt",
+          "TremendousAsmodeus"
+        ]
+      },
+      {
+        "subsection": "Historian Committee",
+        "contributors": [
+          "Chaosyr",
+          "Kitxipixi",
+          "scrybeofcunt",
+          "Sefaku"
+        ]
+      },
+      {
+        "subsection": "Secretarial Committee",
+        "contributors": [
+          "AnimeJesus",
+          "Carpengizmat",
+          "Hedgel2774",
+          "bugmangregor",
+          "Croffee",
+          "scrybeofcunt"
+        ]
+      },
+      {
+        "subsection": "Technical Committee",
+        "contributors": [
+          "vladde",
+          "Chaosyr",
+          "aaandrew",
+          "bugmangregor"
+        ]
+      },
+      {
+        "subsection": "Video-Production Committee",
+        "contributors": [
+          "aaandrew",
+          "Carpengizmat",
+          "Hedgel2774",
+          "Croffee",
+          "Kitxipixi",
+          "heyitserin"
         ]
       }
     ]

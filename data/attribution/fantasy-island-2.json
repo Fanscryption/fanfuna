@@ -1,95 +1,5 @@
 [
   {
-    "section": "Event Committee",
-    "subsections": [
-      {
-        "subsection": "Committee Leaders",
-        "contributors": [
-          "LeshyIRL",
-          "Secundus"
-        ]
-      },
-      {
-        "subsection": "Committee Chairman",
-        "contributors": [
-          "Mr.Invizible (Chairman)",
-          "AnnaStudiio (Vice Chairman)"
-        ]
-      },
-      {
-        "subsection": "Committee Chiefs",
-        "contributors": [
-          "Tiff4744 (Graphics)",
-          "Chaosyr (Historian)",
-          "AnimeJesus (Secretarial)",
-          "Carpengizmat (Secretarial)",
-          "vladde (Technical)",
-          "aaandrew (Video-Production)"
-        ]
-      },
-      {
-        "subsection": "Graphics Committee",
-        "contributors": [
-          "AnnaStudiio",
-          "Blurry",
-          "Carpengizmat",
-          "Croffee",
-          "goofmark_",
-          "Kitxipixi",
-          "Mars",
-          "professoreggnog",
-          "Shady_460",
-          "Tiff4744",
-          "TremendousAsmodeus",
-          "UNDERACHIEVER"
-        ]
-      },
-      {
-        "subsection": "Historian Committee",
-        "contributors": [
-          "Chaosyr",
-          "Kitxipixi",
-          "Mars",
-          "Sefaku",
-          "Sunnkist"
-        ]
-      },
-      {
-        "subsection": "Secretarial Committee",
-        "contributors": [
-          "AnimeJesus",
-          "Blurry",
-          "Carpengizmat",
-          "Croffee",
-          "Hedgel2774"
-        ]
-      },
-      {
-        "subsection": "Technical Committee",
-        "contributors": [
-          "aaandrew",
-          "Blurry",
-          "Chaosyr",
-          "vladde"
-        ]
-      },
-      {
-        "subsection": "Video-Production Committee",
-        "contributors": [
-          "aaandrew",
-          "Carpengizmat",
-          "Croffee",
-          "Hedgel2774",
-          "heyitserin",
-          "Kitxipixi",
-          "loonykattoony",
-          "Shady_460",
-          "Sunnkist"
-        ]
-      }
-    ]
-  },
-  {
     "section": "Voice Acting",
     "subsections": [
       {
@@ -315,6 +225,96 @@
         "subsection": "P03 Mall Background",
         "contributors": [
           "Original Post by Larisa Shpineva"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Event Committee",
+    "subsections": [
+      {
+        "subsection": "Committee Leaders",
+        "contributors": [
+          "LeshyIRL",
+          "Secundus"
+        ]
+      },
+      {
+        "subsection": "Committee Chairman",
+        "contributors": [
+          "Mr.Invizible (Chairman)",
+          "AnnaStudiio (Vice Chairman)"
+        ]
+      },
+      {
+        "subsection": "Committee Chiefs",
+        "contributors": [
+          "Tiff4744 (Graphics)",
+          "Chaosyr (Historian)",
+          "AnimeJesus (Secretarial)",
+          "Carpengizmat (Secretarial)",
+          "vladde (Technical)",
+          "aaandrew (Video-Production)"
+        ]
+      },
+      {
+        "subsection": "Graphics Committee",
+        "contributors": [
+          "AnnaStudiio",
+          "Blurry",
+          "Carpengizmat",
+          "Croffee",
+          "goofmark_",
+          "Kitxipixi",
+          "Mars",
+          "professoreggnog",
+          "Shady_460",
+          "Tiff4744",
+          "TremendousAsmodeus",
+          "UNDERACHIEVER"
+        ]
+      },
+      {
+        "subsection": "Historian Committee",
+        "contributors": [
+          "Chaosyr",
+          "Kitxipixi",
+          "Mars",
+          "Sefaku",
+          "Sunnkist"
+        ]
+      },
+      {
+        "subsection": "Secretarial Committee",
+        "contributors": [
+          "AnimeJesus",
+          "Blurry",
+          "Carpengizmat",
+          "Croffee",
+          "Hedgel2774"
+        ]
+      },
+      {
+        "subsection": "Technical Committee",
+        "contributors": [
+          "aaandrew",
+          "Blurry",
+          "Chaosyr",
+          "vladde"
+        ]
+      },
+      {
+        "subsection": "Video-Production Committee",
+        "contributors": [
+          "aaandrew",
+          "Carpengizmat",
+          "Croffee",
+          "Hedgel2774",
+          "heyitserin",
+          "Kitxipixi",
+          "loonykattoony",
+          "Shady_460",
+          "Sunnkist"
         ]
       }
     ]
