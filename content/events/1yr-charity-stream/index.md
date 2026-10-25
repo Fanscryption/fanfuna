@@ -4,9 +4,6 @@ date = '2022-06-07T17:00:00+02:00'
 draft = false
 short = "the first big event for inscryption"
 cover = "1yr.jpg"
-authors = [
-  { name = "", link = "" },
-]
 +++
 
 {{< youtube FvJCUxMtDIM >}}

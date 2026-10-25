@@ -4,9 +4,6 @@ date = '2024-10-19T17:00:00+02:00'
 draft = false
 short = "the first inscryption anniversary event"
 cover = "inscryption3yr.png"
-authors = [
-  { name = "vladde", link = "https://youtube.com/c/vladde" },
-]
 +++
 
 ![work in progress](/images/wip.png)
