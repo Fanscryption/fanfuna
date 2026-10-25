@@ -4,9 +4,10 @@ date = '2026-10-17T19:00:00+02:00'
 draft = false
 short = "once again, the inscryption community comes together for an amazing show."
 cover = "Inscryption5Years.png"
+logo = "InscryptionLetters%20Logo.png"
 +++
 
-![5 year logo](InscryptionLetters%20Logo.png)
+{{< youtube C0Pbd3Lf-v8 >}}
 
 All good things come to an end. Join us on <time datetime=2026-10-20T17:00Z>10:00 AM PDT / 19:00 CEST</time> to celebrate Inscryption's anniversary with one final party.
 
