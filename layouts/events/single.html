@@ -39,7 +39,6 @@
   .meta {
     margin-block-end: 2em;
     margin-block-start: 0.5em;
-
   }
 
   .meta,
@@ -83,8 +82,26 @@
 
 {{ .Content }}
 
-<p class=meta>
+{{ with $sections := index hugo.Data.attribution .File.ContentBaseName }}
 
-</p>
+<h2 class=credits>Credits & Attribution</h2>
+
+{{ range $section := $sections }}
+<h3>{{ $section.section }}</h3>
+{{ with .text }}
+<p class=subtext>{{ . | markdownify}}</p>
+{{ end }}
+<dl class=credits>
+  {{ range $section.subsections }}
+  <div>
+    <dt>{{ .subsection }}</dt>
+    {{ range .contributors }}
+    <dd>{{ . | markdownify }}</dd>
+    {{ end }}
+  </div>
+  {{ end }}
+</dl>
+{{ end }}
+{{ end }}
 
 {{ end }}
