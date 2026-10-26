@@ -147,22 +147,69 @@
     ]
   },
   {
-    "section": "Stream Assets and Attribution",
+    "section": "Stream Assets",
     "subsections": [
       {
-        "subsection": "Stream UI Credits",
+        "subsection": "Logo",
         "contributors": [
-          "goofmark_ (Logo)",
-          "Tiff4744 (Overlay UI)",
-          "goofmark_ (Overlay UI)",
-          "AnnaStudiio (Starting Soon, Be Right Back, and Goodbye Gifs)",
-          "Tiff4744 (Welcome and Goodbye Gif Base)",
-          "Chaosyr (Credits Document Display)",
-          "Chaosyr (OBS Setup)"
+          "goofmark_"
         ]
       },
       {
-        "subsection": "Credits and Presentation Scene GIF Background",
+        "subsection": "Overlay UI",
+        "contributors": [
+          "Tiff4744"
+        ]
+      },
+      {
+        "subsection": "Overlay UI",
+        "contributors": [
+          "goofmark_"
+        ]
+      },
+      {
+        "subsection": "Starting Soon GIF",
+        "contributors": [
+          "AnnaStudiio"
+        ]
+      },
+      {
+        "subsection": "Be Right Back GIF",
+        "contributors": [
+          "AnnaStudiio"
+        ]
+      },
+      {
+        "subsection": "Goodbye GIF",
+        "contributors": [
+          "AnnaStudiio"
+        ]
+      },
+      {
+        "subsection": "Welcome and Goodbye GIF Base",
+        "contributors": [
+          "Tiff4744"
+        ]
+      },
+      {
+        "subsection": "Credits Document Display",
+        "contributors": [
+          "Chaosyr"
+        ]
+      },
+      {
+        "subsection": "OBS Setup",
+        "contributors": [
+          "Chaosyr"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Attribution",
+    "subsections": [
+      {
+        "subsection": "Credits & Presentation Scene GIF",
         "contributors": [
           "Original Post by @kawaiipixelcollection on Tumblr"
         ]
@@ -174,9 +221,9 @@
         ]
       },
       {
-        "subsection": "Background Music used in Intermissions and Credits",
+        "subsection": "Background Music",
         "contributors": [
-          "Pony Island Sound Files"
+          "Pony Island"
         ]
       },
       {
@@ -198,31 +245,31 @@
         ]
       },
       {
-        "subsection": "P03 School Background",
+        "subsection": "School Background",
         "contributors": [
           "University of Missouri"
         ]
       },
       {
-        "subsection": "P03 Beach Background",
+        "subsection": "Beach Background",
         "contributors": [
           "Original Post by Sean Oulashin on Unsplash"
         ]
       },
       {
-        "subsection": "P03 Gas Station Background",
+        "subsection": "Gas Station Background",
         "contributors": [
           "Original Post by Hans Eiskonen on Unsplash"
         ]
       },
       {
-        "subsection": "P03 Club Room Background",
+        "subsection": "Club Room Background",
         "contributors": [
           "Georgia State University"
         ]
       },
       {
-        "subsection": "P03 Mall Background",
+        "subsection": "Mall Background",
         "contributors": [
           "Original Post by Larisa Shpineva"
         ]
