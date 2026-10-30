@@ -63,7 +63,10 @@
 {{ define "main" }}
 
 {{ with .Params.logo }}
-<img src='{{ . }}' alt='' style='margin-block: 1em;'>
+{{ with $.Resources.Get . }}
+{{ $img := .Resize "800x" }}
+<img src='{{ $img.RelPermalink }}' width="{{ $img.Width }}" height="{{ $img.Height }}" style='margin-block: 1em;'>
+{{ end }}
 {{ end }}
 
 <h1>{{ .Title }}</h1>
