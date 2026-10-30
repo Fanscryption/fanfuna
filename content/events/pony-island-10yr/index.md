@@ -4,6 +4,7 @@ date = "2026-01-03"
 draft = false
 short = "a decade has passed since the legendary Pony Island was released"
 cover = "pi10yr.png"
+logo = "pi10th-logo.png"
 +++
 
 ![work in progress](/images/wip.png)
