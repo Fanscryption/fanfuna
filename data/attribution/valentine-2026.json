@@ -14,11 +14,11 @@
         "contributors": [
           "goofmark_",
           "AnnaStudiio",
-          "MrInvizible",
+          "Mr. Invizible",
           "Miseryguts",
-          "Hedgel2774",
+          "Hedgel",
           "SupremeLordEnder",
-          "scrybeofcunt",
+          "Mars",
           "Kitxipixi"
         ]
       },
@@ -26,7 +26,7 @@
         "subsection": "Layouts",
         "contributors": [
           "goofmark_",
-          "Tiff4744"
+          "Tiff"
         ]
       },
       {
@@ -56,7 +56,7 @@
       {
         "subsection": "Administrator",
         "contributors": [
-          "MrInvizible"
+          "Mr. Invizible"
         ]
       },
       {
@@ -92,7 +92,7 @@
       {
         "subsection": "First Person Perspective",
         "contributors": [
-          "Hedgel2774"
+          "Hedgel"
         ]
       },
       {
@@ -108,7 +108,7 @@
       {
         "subsection": "Overlay",
         "contributors": [
-          "Tiff4744"
+          "Tiff"
         ]
       },
       {
@@ -171,41 +171,30 @@
       {
         "subsection": "Committee Chairman",
         "contributors": [
-          "MrInvizible (Chairman)",
-          "AnnaStudiio (Vice Chairman)"
-        ]
-      },
-      {
-        "subsection": "Committee Chiefs",
-        "contributors": [
-          "Tiff4744 (Graphics)",
-          "Chaosyr (Historian)",
-          "AnimeJesus (Secretarial)",
-          "Carpengizmat (Secretarial)",
-          "vladde (Technical)",
-          "aaandrew (Video-Production)"
+          "MrInvizible",
+          "AnnaStudiio <small>Vice</small>"
         ]
       },
       {
         "subsection": "Graphics Committee",
         "contributors": [
+          "Tiff <small>Chief</small>",
           "AnnaStudiio",
           "Carpengizmat",
-          "Tiff4744",
           "Kitxipixi",
           "Croffee",
           "Blurry",
           "UNDERACHIEVER",
-          "professoreggnog",
+          "Prof. Eggnog",
           "goofmark_",
           "TremendousAsmodeus",
-          "Shady_460"
+          "Shady"
         ]
       },
       {
         "subsection": "Historian Committee",
         "contributors": [
-          "Chaosyr",
+          "Chaosyr <small>Chief</small>",
           "Kitxipixi",
           "Sunnkist",
           "Sefaku"
@@ -214,8 +203,8 @@
       {
         "subsection": "Secretarial Committee",
         "contributors": [
-          "Carpengizmat",
-          "AnimeJesus",
+          "Anime Jesus <small>Chief</small>",
+          "Carpengizmat <small>Chief</small>",
           "Croffee",
           "Blurry"
         ]
@@ -223,8 +212,8 @@
       {
         "subsection": "Technical Committee",
         "contributors": [
+          "vladde <small>Chief</small>",
           "Chaosyr",
-          "vladde",
           "aaandrew",
           "Blurry"
         ]
@@ -232,13 +221,13 @@
       {
         "subsection": "Video-Production Committee",
         "contributors": [
+          "aaandrew <small>Chief</small>",
           "Carpengizmat",
-          "aaandrew",
           "Kitxipixi",
           "Sunnkist",
           "Croffee",
-          "Shady_460",
-          "heyitserin"
+          "Shady",
+          "Erin"
         ]
       }
     ]
