@@ -4,6 +4,7 @@ date = '2026-02-14T17:00:00+02:00'
 draft = false
 short = "love is in the air! come see this lovely event ;-)"
 cover = "valentine.png"
+logo = "valentines-logo.png"
 +++
 
 ![work in progress](/images/wip.png)
